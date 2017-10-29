@@ -1,26 +1,37 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 // TODO : MAKE NEW SYSTEM TO REMOVE THIS
 using Completed;
 using UnityEngine.UI;
 
 
-//inherits Enemy for some common functionality
+///<summary>
+/// Dummy unit
+///  inherits Enemy for some common functionality (because rn im too lazy to implement MovingObject)
+/// </summary>
+
 public class Dummy : Enemy
 {
     private GameObject hitText;
     //Start overrides the virtual Start function of the base class.
     protected override void Start ()
 	{
+	    var stats = new StatManager();
 
+	    var statTypes = Enum.GetValues(typeof(StatManager.StatList));
+	    foreach (var statType in statTypes)
+	    {
+	        GenericStat stat = stats.GetStat((StatManager.StatList)statType);
+	        if (stat != null)
+	        {
+	            Debug.Log(string.Format("Stat {0}'s value is {1}",
+	                stat.StatName, stat.StatValue));
+	        }
+	    }
         //Call the start function of our base class MovingObject.
         base.Start ();
 	}
-
-    void OnGUI(bool displayMessage)
-    {
-        if (displayMessage) { GUI.Label(new Rect((Screen.width * 0.5f - 50f), (Screen.height * 0.5f - 10f), 100f, 20f), "Testing"); }
-    }
 
 
     //MoveEnemy is called by the GameManger each turn to tell each Enemy to try to move towards the player.
