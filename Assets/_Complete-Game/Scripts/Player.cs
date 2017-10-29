@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;	
 using UnityEngine.SceneManagement;
+using Debug = System.Diagnostics.Debug;
 
 namespace Completed
 {
@@ -32,8 +33,8 @@ namespace Completed
 			animator = GetComponent<Animator>();
 			
 			food = GameManager.instance.playerFoodPoints;
-			
-			foodText.text = "Health: " + food;
+		    foodText = GameObject.Find("FoodText").GetComponent<Text>();
+            foodText.text = "Health: " + food;
 			
 			base.Start ();
 		}
