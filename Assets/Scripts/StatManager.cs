@@ -50,6 +50,7 @@ public class StatManager
     private Dictionary<StatList, GenericStat> _statDict;
     public enum StatList
     {
+        None = -1,
         Level,
         Strengh,
         Dexterity,
