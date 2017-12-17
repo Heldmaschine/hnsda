@@ -1,5 +1,5 @@
 ﻿
-public interface IStatModifiable
+public interface IIStatModifiable
 {
     float StatModifierValue { get; }
 

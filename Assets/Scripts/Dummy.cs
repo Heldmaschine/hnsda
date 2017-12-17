@@ -46,17 +46,18 @@ public class Dummy : Enemy
         }
     }
 
-    //void DisplayStatValues()
-    //{
-    //    ForEachEnum<RPGStatType>((statType) => {
-    //        RPGStat stat = stats.GetStat((RPGStatType)statType);
-    //        if (stat != null)
-    //        {
-    //            Debug.Log(string.Format("Stat {0}'s value is {1}",
-    //                stat.StatName, stat.StatValue));
-    //        }
-    //    });
-    //}
+    void DisplayStatValues()
+    {
+        ForEachEnum<RPGStatType>((statType) =>
+        {
+            RPGStat stat = stats.GetStat((RPGStatType)statType);
+            if (stat != null)
+            {
+                Debug.Log(string.Format("Stat {0}'s value is {1}",
+                    stat.StatName, stat.StatValue));
+            }
+        });
+    }
 
     //MoveEnemy is called by the GameManger each turn to tell each Enemy to try to move towards the player.
 
