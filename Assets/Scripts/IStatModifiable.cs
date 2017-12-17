@@ -1,7 +1,7 @@
 ﻿
 public interface IStatModifiable
 {
-    int StatModifierValue { get; }
+    float StatModifierValue { get; }
 
     void AddModifier(Modifier mod);
     void ClearModifiers();

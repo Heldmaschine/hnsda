@@ -44,10 +44,11 @@ using UnityEngine;
         •	Может вызвать 1 тотем
 */
 
-
-public class StatManager
+    //TODO:Find a way to make this class non-generic and maintain multiple stat types
+public class StatManager<TStat>
+    where TStat:GenericStat, new()
 {
-    private Dictionary<StatList, GenericStat> _statDict;
+    private Dictionary<StatList, TStat> _statDict;
     public enum StatList
     {
         None = -1,
@@ -67,21 +68,21 @@ public class StatManager
     }
     public StatManager()
     {
-        _statDict = new Dictionary<StatList, GenericStat>();
+        _statDict = new Dictionary<StatList, TStat>();
         ConfigureStats();
     }
 
     protected virtual void ConfigureStats()
     {
-        GenericStat level = CreateOrGetStat(StatList.Level);
+        TStat level = CreateOrGetStat(StatList.Level);
         level.StatName = "Level";
         level.StatValue = 1;
 
-        GenericStat life = CreateOrGetStat(StatList.Life);
+        TStat life = CreateOrGetStat(StatList.Life);
         life.StatName = "Life";
         life.StatValue = 50;
 
-        GenericStat mana = CreateOrGetStat(StatList.Mana);
+        TStat mana = CreateOrGetStat(StatList.Mana);
         mana.StatName = "Mana";
         mana.StatValue = 40;
     }
@@ -91,29 +92,21 @@ public class StatManager
         return _statDict.ContainsKey(statType);
     }
 
-    public GenericStat GetStat(StatList statType)
+    public TStat GetStat(StatList statType)
     {
-        if (Contains(statType))
-        {
-            return _statDict[statType];
-        }
-        return null;
+        return Contains(statType) ? _statDict[statType] : null;
     }
 
-    protected GenericStat CreateStat(StatList statType)
+    protected TStat CreateStat(StatList statType)
     {
-        GenericStat stat = new GenericStat();
+        TStat stat = new TStat();
         _statDict.Add(statType, stat);
         return stat;
     }
 
-    protected GenericStat CreateOrGetStat(StatList statType)
+    protected TStat CreateOrGetStat(StatList statType)
     {
-        GenericStat stat = GetStat(statType);
-        if (stat == null)
-        {
-            stat = CreateStat(statType);
-        }
+        TStat stat = GetStat(statType) ?? CreateStat(statType);
         return stat;
     }
 }

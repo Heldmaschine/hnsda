@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using UnityEngine.Assertions.Comparers;
 
 public class ModifiableStat : GenericStat, IStatModifiable
 {
@@ -48,11 +49,11 @@ public class ModifiableStat : GenericStat, IStatModifiable
                     incMod += mod.Value;
                     break;
                 case Modifier.Types.More:
-                    moreMod *= mod.Value;
+                    if(Math.Abs(mod.Value) > float.Epsilon) moreMod *= mod.Value;
                     break;
             }
         }
 
-        StatModifierValue += ((base.StatValue + flatMod) * (1+incMod)) * (moreMod==1f?1+moreMod:1);
+        StatModifierValue += ((base.StatValue + flatMod) * (1+incMod)) * moreMod;
     }
 }

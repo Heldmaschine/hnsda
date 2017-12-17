@@ -16,19 +16,15 @@ public class Modifier {
 
     public float Value { get; set; }
 
-    public StatManager.StatList StatType { get; set; }
-
     public Modifier()
     {
         Type = Types.None;
         Value = 0;
-        StatType = StatManager.StatList.None;
     }
 
-    public Modifier(StatManager.StatList targetStat, Types modType, float value)
+    public Modifier(Types modType, float value)
     {
         Type = modType;
         Value = value;
-        StatType = targetStat;
     }
 }

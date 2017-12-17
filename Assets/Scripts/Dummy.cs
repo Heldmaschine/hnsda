@@ -15,24 +15,48 @@ public class Dummy : Enemy
 {
     private GameObject hitText;
     //Start overrides the virtual Start function of the base class.
-    protected override void Start ()
-	{
-	    var stats = new StatManager();
+    //TODO: REMOVE <> TO MAEK IT FANCIER
+    private StatManager<ModifiableStat> stats;
 
-	    var statTypes = Enum.GetValues(typeof(StatManager.StatList));
-	    foreach (var statType in statTypes)
-	    {
-	        GenericStat stat = stats.GetStat((StatManager.StatList)statType);
-	        if (stat != null)
-	        {
-	            Debug.Log(string.Format("Stat {0}'s value is {1}",
-	                stat.StatName, stat.StatValue));
-	        }
-	    }
-        //Call the start function of our base class MovingObject.
-        base.Start ();
-	}
+    protected override void Start()
+    {
+        stats = new StatManager<ModifiableStat>();
 
+        DisplayStatValues();
+
+        var health = stats.GetStat(StatManager<ModifiableStat>.StatList.Life);
+        health.AddModifier(new Modifier(Modifier.Types.Flat, 10f));      // 60
+        health.AddModifier(new Modifier(Modifier.Types.Increased, 0.5f));           // 90
+        health.AddModifier(new Modifier(Modifier.Types.More, 2.0f));     // 180
+        health.UpdateModifiers();
+
+        DisplayStatValues();
+        base.Start();
+    }
+
+    void ForEachEnum<T>(Action<T> action)
+    {
+        if (action != null)
+        {
+            var statTypes = Enum.GetValues(typeof(T));
+            foreach (var statType in statTypes)
+            {
+                action((T)statType);
+            }
+        }
+    }
+
+    //void DisplayStatValues()
+    //{
+    //    ForEachEnum<RPGStatType>((statType) => {
+    //        RPGStat stat = stats.GetStat((RPGStatType)statType);
+    //        if (stat != null)
+    //        {
+    //            Debug.Log(string.Format("Stat {0}'s value is {1}",
+    //                stat.StatName, stat.StatValue));
+    //        }
+    //    });
+    //}
 
     //MoveEnemy is called by the GameManger each turn to tell each Enemy to try to move towards the player.
 

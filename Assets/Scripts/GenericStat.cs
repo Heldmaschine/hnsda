@@ -6,7 +6,7 @@ public class GenericStat {
 
     public string StatName { get; set; }
 
-    public int StatValue { get; set; }
+    public virtual float StatValue { get; set; }
 
     public GenericStat()
     {
