@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.Assertions.Comparers;
 
-public class ModifiableStat : GenericStat, IStatModifiable
+public class ModifiableStat : GenericStat, IIStatModifiable
 {
     private List<Modifier> _statMods;
 

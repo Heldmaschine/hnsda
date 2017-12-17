@@ -48,9 +48,9 @@ public class Dummy : Enemy
 
     void DisplayStatValues()
     {
-        ForEachEnum<RPGStatType>((statType) =>
+        ForEachEnum<StatManager<ModifiableStat>.StatList>((statType) =>
         {
-            RPGStat stat = stats.GetStat((RPGStatType)statType);
+            var stat = stats.GetStat(statType);
             if (stat != null)
             {
                 Debug.Log(string.Format("Stat {0}'s value is {1}",
