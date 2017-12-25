@@ -6,11 +6,18 @@ using System.Collections;
 /// within the RPGStatCollection class
 /// </summary>
 public enum RPGStatType {
-    None = 0,
-
-    Health = 1,
-    Mana = 2,
-
-    Stamina = 10,
-    Wisdom = 11,
+    None = -1,
+    Level,
+    Strengh,
+    Dexterity,
+    Intelligence,
+    Life,
+    Mana,
+    EShield,
+    LifeRegen,
+    ManaRagen,
+    EShieldRegen,
+    Accuracy,
+    Evasion,
+    Dodge
 }

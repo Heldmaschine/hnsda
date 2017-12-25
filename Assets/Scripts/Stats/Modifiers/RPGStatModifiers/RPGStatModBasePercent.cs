@@ -10,7 +10,7 @@ public class RPGStatModBasePercent : RPGStatModifier {
     /// The order in which the modifier is applied to the stat
     /// </summary>
     public override int Order {
-        get { return 1; }
+        get { return 2; }
     }
 
     /// <summary>

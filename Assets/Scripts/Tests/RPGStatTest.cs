@@ -19,7 +19,7 @@ public class RPGStatTest : MonoBehaviour {
             }
         }
 
-        var health = stats.GetStat<RPGStatModifiable>(RPGStatType.Health);
+        var health = stats.GetStat<RPGStatModifiable>(RPGStatType.Life);
         health.AddModifier(new RPGStatModBasePercent(1.0f));      // 200
         health.AddModifier(new RPGStatModBaseAdd(50f));           // 250
         health.AddModifier(new RPGStatModTotalPercent(1.0f));     // 500

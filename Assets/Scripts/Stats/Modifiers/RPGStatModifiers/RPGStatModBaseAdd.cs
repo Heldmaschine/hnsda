@@ -9,7 +9,7 @@ public class RPGStatModBaseAdd : RPGStatModifier {
     /// <summary>
     /// The order in which the modifier is applied to the stat
     /// </summary>
-    public override int Order { get { return 2; } }
+    public override int Order { get { return 1; } }
 
     /// <summary>
     /// Calculates the amount to apply to the stat based off the 
