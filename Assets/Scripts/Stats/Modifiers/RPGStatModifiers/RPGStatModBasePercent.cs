@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-/// <summary>
+﻿/// <summary>
 /// Modifier that takes a percentage of the stat's value
 /// </summary>
 [System.Serializable]

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 /// <summary>
 /// Example Entity Level class the implements the GetExpRequiredForLevel method

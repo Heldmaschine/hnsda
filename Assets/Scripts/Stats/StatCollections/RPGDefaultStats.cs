@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-public class RPGDefaultStats : RPGStatCollection {
+﻿public class RPGDefaultStats : RPGStatCollection {
     protected override void ConfigureStats() {
         //var stamina = CreateOrGetStat<RPGAttribute>(RPGStatType.Stamina);
         //stamina.StatName = "Stamina";

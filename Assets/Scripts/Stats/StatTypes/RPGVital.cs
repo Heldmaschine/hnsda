@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-using System;
-using System.Collections;
+﻿using System;
 
 /// <summary>
 /// RPGStat that inherits from RPGAttribute and implement IStatCurrentValueChange

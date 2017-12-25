@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System;
 
 public class RPGVitalTest : MonoBehaviour {
@@ -8,7 +7,7 @@ public class RPGVitalTest : MonoBehaviour {
 	void Start () {
         stats = new RPGDefaultStats();
 
-        var health = stats.GetStat<RPGVital>(RPGStatType.Health);
+        var health = stats.GetStat<RPGVital>(RPGStatType.Life);
         health.OnCurrentValueChange += OnStatValueChange; 
 
         DisplayStatValues();

@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-using System;
+﻿using System;
 
 /// <summary>
 /// Used to indicate when the stat's value changes

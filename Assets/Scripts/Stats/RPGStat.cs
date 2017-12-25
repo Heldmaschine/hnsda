@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-/// <summary>
+﻿/// <summary>
 /// The base class for all other Stats.
 /// </summary>
 public class RPGStat {

@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-/// <summary>
+﻿/// <summary>
 /// Basic implementation of a RPGStatLinker. Returns a percentage 
 /// of the Linked Stat
 /// </summary>

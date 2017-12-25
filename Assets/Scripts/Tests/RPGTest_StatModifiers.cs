@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class RPGTest_StatModifiers : MonoBehaviour {
     private RPGStatModifiable stat;

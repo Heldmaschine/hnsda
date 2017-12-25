@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 /// <summary>
@@ -14,12 +13,7 @@ public class RPGStatCollection : MonoBehaviour {
     /// Dictionary containing all stats held within the collection
     /// </summary>
     public Dictionary<RPGStatType, RPGStat> StatDict {
-        get {
-            if (_statDict == null) {
-                _statDict = new Dictionary<RPGStatType, RPGStat>();
-            }
-            return _statDict;
-        }
+        get { return _statDict ?? (_statDict = new Dictionary<RPGStatType, RPGStat>()); }
     }
 
     /// <summary>

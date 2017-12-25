@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-/// <summary>
+﻿/// <summary>
 /// Allows the stat to use modifiers
 /// </summary>
 public interface IStatModifiable {

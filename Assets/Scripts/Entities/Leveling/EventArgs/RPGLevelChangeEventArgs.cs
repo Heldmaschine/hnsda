@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-using System;
+﻿using System;
 
 /// <summary>
 /// Event Args used for displaying changes in a entity's level

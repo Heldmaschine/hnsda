@@ -1,9 +1,7 @@
 ﻿using System;
 using UnityEngine;
-using System.Collections;
 // TODO : MAKE NEW SYSTEM TO REMOVE THIS
 using Completed;
-using UnityEngine.UI;
 
 
 ///<summary>

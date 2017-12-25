@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-/// <summary>
+﻿/// <summary>
 /// Modifier that adds the value to the stat value
 /// </summary>
 [System.Serializable]

@@ -1,7 +1,6 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using UnityEngine.Assertions.Comparers;
 
 public class ModifiableStat : GenericStat, IIStatModifiable
 {

@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-/// <summary>
+﻿/// <summary>
 /// Modifier that adds the value to the stat value
 /// </summary>
 [System.Serializable]
@@ -9,7 +6,7 @@ public class RPGStatModTotalAdd : RPGStatModifier {
     /// <summary>
     /// The order in which the modifier is applied to the stat
     /// </summary>
-    public override int Order { get { return 4; } }
+    public override int Order { get { return 3; } }
 
     /// <summary>
     /// Calculates the amount to apply to the stat based off the 

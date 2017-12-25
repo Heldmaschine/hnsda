@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-
-/// <summary>
+﻿/// <summary>
 /// Used to list off all stats that can be used
 /// within the RPGStatCollection class
 /// </summary>
