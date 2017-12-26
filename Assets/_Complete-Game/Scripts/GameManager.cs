@@ -4,10 +4,9 @@ using System.Collections;
 
 namespace Completed
 {
-	using System.Collections.Generic;		
-	using UnityEngine.UI;					
-	
-	public class GameManager : MonoBehaviour
+    using System.Collections.Generic;
+    using UnityEngine.UI;
+    public class GameManager : MonoBehaviour
 	{
 		public float levelStartDelay = 2f;						
 		public float turnDelay = 0.1f;							
