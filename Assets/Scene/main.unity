@@ -198,11 +198,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 14416117}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.049997967, y: 0, z: -10}
+  m_LocalPosition: {x: -1.3166606, y: 2.280004, z: -10}
   m_LocalScale: {x: 0.9692294, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 358117511}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &14416123
 MonoBehaviour:
@@ -254,11 +254,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4569260107156466, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1690339408189112, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
       propertyPath: m_Name
       value: slime_red (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114816260207766198, guid: e22ded150dd76c14a84e67a64519cdb9,
+        type: 2}
+      propertyPath: waitToReload
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114036837304149454, guid: e22ded150dd76c14a84e67a64519cdb9,
+        type: 2}
+      propertyPath: damageToGive
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
@@ -368,11 +378,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4569260107156466, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1690339408189112, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
       propertyPath: m_Name
       value: slime_red (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114816260207766198, guid: e22ded150dd76c14a84e67a64519cdb9,
+        type: 2}
+      propertyPath: waitToReload
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114036837304149454, guid: e22ded150dd76c14a84e67a64519cdb9,
+        type: 2}
+      propertyPath: damageToGive
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
@@ -547,11 +567,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4569260107156466, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1690339408189112, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
       propertyPath: m_Name
       value: slime_red (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114816260207766198, guid: e22ded150dd76c14a84e67a64519cdb9,
+        type: 2}
+      propertyPath: waitToReload
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114036837304149454, guid: e22ded150dd76c14a84e67a64519cdb9,
+        type: 2}
+      propertyPath: damageToGive
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
@@ -578,12 +608,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 656510202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.56, y: -0.44, z: -1}
+  m_LocalPosition: {x: -0.61, y: -0.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1189382394}
   m_Father: {fileID: 358117511}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &741955092
 Prefab:
@@ -622,7 +652,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4056048844777286, guid: 91d9bbb853ffb5741b070f2793315c9a, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4056048844777286, guid: 91d9bbb853ffb5741b070f2793315c9a, type: 2}
       propertyPath: m_LocalScale.x
@@ -771,7 +801,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1189382390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -0.02, z: 0}
+  m_LocalPosition: {x: -0.05, y: -0.02, z: 0}
   m_LocalScale: {x: 1.170105, y: 1.2027345, z: 1}
   m_Children: []
   m_Father: {fileID: 656510203}
@@ -819,7 +849,12 @@ Prefab:
     - target: {fileID: 114036837304149454, guid: e22ded150dd76c14a84e67a64519cdb9,
         type: 2}
       propertyPath: damageToGive
-      value: 5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114816260207766198, guid: e22ded150dd76c14a84e67a64519cdb9,
+        type: 2}
+      propertyPath: waitToReload
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
@@ -833,11 +868,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4832159663908218, guid: 2ce6f22761710ff4c8c7fa770d0dfa25, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 40.222
+      value: 41.26
       objectReference: {fileID: 0}
     - target: {fileID: 4832159663908218, guid: 2ce6f22761710ff4c8c7fa770d0dfa25, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -45.422
+      value: -44.74
       objectReference: {fileID: 0}
     - target: {fileID: 4832159663908218, guid: 2ce6f22761710ff4c8c7fa770d0dfa25, type: 2}
       propertyPath: m_LocalPosition.z
@@ -950,6 +985,11 @@ Prefab:
       propertyPath: m_Name
       value: slime_red (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114816260207766198, guid: e22ded150dd76c14a84e67a64519cdb9,
+        type: 2}
+      propertyPath: waitToReload
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
   m_IsPrefabParent: 0
@@ -990,11 +1030,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4569260107156466, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1690339408189112, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
       propertyPath: m_Name
       value: slime_red (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114816260207766198, guid: e22ded150dd76c14a84e67a64519cdb9,
+        type: 2}
+      propertyPath: waitToReload
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114036837304149454, guid: e22ded150dd76c14a84e67a64519cdb9,
+        type: 2}
+      propertyPath: damageToGive
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e22ded150dd76c14a84e67a64519cdb9, type: 2}
