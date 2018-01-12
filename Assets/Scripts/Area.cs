@@ -11,7 +11,11 @@ public class Area : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
 	}
-	
+
+    /// <summary>
+    /// Отображение названия локации
+    /// </summary>
+   
     public IEnumerator ShowArea(string name) {
         anim.Play("Area_Show");
         transform.GetChild(0).GetComponent<Text>().text = name;

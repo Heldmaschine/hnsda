@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Aura : MonoBehaviour {
 
-    // Tiempo de precarga
     public float waitBeforePlay;
 
     Animator anim;
@@ -25,15 +24,16 @@ public class Aura : MonoBehaviour {
         anim.Play("Aura_Idle");
         loaded = false;
     }
-
-    // Método para comprobar si ya hemos cargado suficiente
+    /// <summary>
+    /// Метод проверки загрузки персонажа 
+    /// </summary>
+    
     public IEnumerator Manager() {
         yield return new WaitForSeconds(waitBeforePlay);
         anim.Play("Aura_Play");
         loaded = true;
     }
 
-    // Método para comprobar si ya hemos cargado suficiente
     public bool IsLoaded() {
         return loaded;
     }

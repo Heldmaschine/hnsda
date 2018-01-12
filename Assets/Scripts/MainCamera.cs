@@ -16,19 +16,16 @@ public class MainCamera : MonoBehaviour {
     }
 
     void Start() {
-        // Forzar la resolución si no estamos en versión Web
+        
         if( Application.platform != RuntimePlatform.WebGLPlayer )
             Screen.SetResolution (800, 800, true);
     }
 
     void Update () {
 
-        // Forzar la resolución si no estamos en versión Web
         if( Application.platform != RuntimePlatform.WebGLPlayer ) {
-            // Si no es cuadrada o pantalla completa
             if (!Screen.fullScreen || Camera.main.aspect != 1) 
                 Screen.SetResolution (800, 800, true);
-            // Permitir cerrar juego al presionar escape
             if (Input.GetKey("escape")) 
                 Application.Quit();
         }
@@ -50,7 +47,9 @@ public class MainCamera : MonoBehaviour {
         );
 
     }
-
+    /// <summary>
+    /// Позиционирование камеры
+    /// </summary>
     public void SetBound (GameObject map) {
         Tiled2Unity.TiledMap config = map.GetComponent<Tiled2Unity.TiledMap>();
         float cameraSize = Camera.main.orthographicSize;
@@ -62,7 +61,9 @@ public class MainCamera : MonoBehaviour {
 
         FastMove();
     }
-
+    /// <summary>
+    /// Передвижение камеры
+    /// </summary>
     public void FastMove(){
 
         transform.position = new Vector3(

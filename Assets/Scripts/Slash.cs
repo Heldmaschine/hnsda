@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Slash : MonoBehaviour {
 
-    [Tooltip("Esperar X segundos antes de destruir el objeto")]
+    [Tooltip("Время ожидания удаление обьекта")]
     public float waitBeforeDestroy;
 
     [HideInInspector]
@@ -20,8 +20,8 @@ public class Slash : MonoBehaviour {
         if (col.tag == "Object"){ 
             yield return new WaitForSeconds(waitBeforeDestroy);
             Destroy(gameObject);
-        } else if (col.tag != "Player" && col.tag != "Attack"){ 
-            ///--- Restamos uno de vida si es un enemigo
+        } else if (col.tag != "Player" && col.tag != "Attack"){
+            ///--- Вычитание жизни
             if (col.tag == "Enemy") col.SendMessage("Attacked");
             Destroy(gameObject);
         }

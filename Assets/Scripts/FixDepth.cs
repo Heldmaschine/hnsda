@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FixDepth : MonoBehaviour {
 
-    // Variable para actualizar la profundidad en cada fotograma
+    /// <summary>
+    /// Переменная для обновления глубины в каждом кадре
+    /// </summary>
     public bool fixEveryFrame;
     SpriteRenderer spr;
 
